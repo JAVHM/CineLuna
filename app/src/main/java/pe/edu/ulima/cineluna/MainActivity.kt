@@ -5,7 +5,7 @@ import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        //Test
+        //Test 12121212
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
