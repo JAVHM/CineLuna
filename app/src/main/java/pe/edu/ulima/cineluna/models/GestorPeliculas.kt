@@ -3,7 +3,7 @@ package pe.edu.ulima.pm.swapp.models
 import pe.edu.ulima.pm.swapp.models.beans.Peliculas
 
 class GestorPeliculas {
-    fun obtenerListaPlanetas() : List<Peliculas> {
+    fun obtenerListaPeliculas() : List<Peliculas> {
         return listOf(
             Peliculas("Dr. Strange 2", "desert", "Sam Raimi!"),
             Peliculas("Top Gun 2", "grasslands, mountains", "Del actor de misión imposible"),
