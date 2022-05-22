@@ -6,7 +6,8 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".MainActivity"
-android:id="@+id/dlaMain">
+android:id="@+id/dlaMain"
+    android:background="@drawable/sala2">
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -17,7 +18,7 @@ android:id="@+id/dlaMain">
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/toolbar"
         android:elevation="4dp"
-        android:background="#AA99FF">
+        android:background="#77000E">
         <TextView
             android:id="@+id/tviTitulo"
             android:layout_width="wrap_content"
@@ -26,7 +27,10 @@ android:id="@+id/dlaMain">
             android:textSize="34sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            >
         </TextView>
     </androidx.appcompat.widget.Toolbar>
 
