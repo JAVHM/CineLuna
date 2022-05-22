@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
-        <item android:title="%NOMBRE%"/>
-        <item android:title="-------------------"/>
+
         <item android:id="@+id/menPlanetas" android:title="Cartelera"/>
         <item android:id="@+id/menNavesEspaciales" android:title="Sobre nosotros"/>
     </group>

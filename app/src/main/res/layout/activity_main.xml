@@ -39,11 +39,13 @@ android:id="@+id/dlaMain">
 
 
 <com.google.android.material.navigation.NavigationView
+
     android:id="@+id/nviMain"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     app:menu="@menu/menu_navigation"
     android:layout_gravity="start"
-    android:fitsSystemWindows="true"/>
+    android:fitsSystemWindows="true"
+    app:headerLayout="@layout/nav_header"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
