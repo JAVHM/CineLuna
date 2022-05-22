@@ -9,15 +9,15 @@ import androidx.fragment.app.FragmentActivity
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : FragmentActivity() {
-     var eteNombre: TextView?=null;
-     var eteSaludo:TextView?=null;
-     private lateinit var nviMain: NavigationView
-     private lateinit var dlaMain: DrawerLayout
+    var eteNombre: TextView?=null;
+    var eteSaludo:TextView?=null;
+    private lateinit var nviMain: NavigationView
+    private lateinit var dlaMain: DrawerLayout
+    private val fragmentPeliculas = PeliculasFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Test 12121212
         nviMain= findViewById(R.id.nviMain);
         dlaMain=findViewById(R.id.dlaMain)
         //headerLayout=NavigationView!!.getHeaderView(0);
@@ -28,6 +28,11 @@ class MainActivity : FragmentActivity() {
         val dato=bundle?.getString("NOMBRE")
         eteSaludo!!.text="Hola ${dato.toString()}"
         eteNombre!!.setText(dato.toString())
+
+        // Cargar el fragment por defecto
+        val ft = supportFragmentManager.beginTransaction()
+        ft.add(R.id.fcvSecciones, fragmentPeliculas)
+        ft.commit()
 
         //cerrar el memu
         nviMain.setNavigationItemSelectedListener {
