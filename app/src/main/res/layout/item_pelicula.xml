@@ -16,7 +16,7 @@
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/black"/>
+        android:textColor="#272626"/>
 
     <TextView
         android:id="@+id/tviPeliculaHora"
