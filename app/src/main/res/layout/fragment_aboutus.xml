@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#B10C00"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/tviTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Quienes somos?"
+            android:textSize="34sp"></TextView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/miembro1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="1dp"
+        android:background="@drawable/textview_border"
+        android:text="Josue Leite (20181012)"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/miembro2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/miembro1"
+        android:layout_margin="1dp"
+        android:background="@drawable/textview_border"
+        android:text="Jaime Van Hemelrijck"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/miembro3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/miembro2"
+        android:layout_margin="1dp"
+        android:background="@drawable/textview_border"
+        android:text="Robert Sebastian Lezama"
+        android:textSize="24sp" />
+
+</RelativeLayout>

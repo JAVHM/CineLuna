@@ -9,8 +9,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.FragmentActivity
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : FragmentActivity() {
     private var mButLogin: Button?=null
      var eteLoginNombre: TextView?=null;
     override fun onCreate(savedInstanceState: Bundle?) {
