@@ -27,8 +27,8 @@
 
     <TextView
         android:id="@+id/tviDescripcion"
-        android:layout_width="371dp"
-        android:layout_height="88dp"
+        android:layout_width="375dp"
+        android:layout_height="100dp"
         android:layout_marginTop="32dp"
         android:text="%Descripcion%"
         app:layout_constraintEnd_toEndOf="parent"
