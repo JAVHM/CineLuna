@@ -27,7 +27,6 @@
         android:layout_height="60dp"
         android:layout_below="@id/toolbar"
         android:layout_margin="1dp"
-        android:background="@drawable/textview_border"
         android:text="Josue Leite (20181012)"
         android:textSize="24sp" />
 
@@ -37,7 +36,6 @@
         android:layout_height="60dp"
         android:layout_below="@+id/miembro1"
         android:layout_margin="1dp"
-        android:background="@drawable/textview_border"
         android:text="Jaime Van Hemelrijck"
         android:textSize="24sp" />
 
@@ -47,7 +45,6 @@
         android:layout_height="60dp"
         android:layout_below="@+id/miembro2"
         android:layout_margin="1dp"
-        android:background="@drawable/textview_border"
         android:text="Robert Sebastian Lezama"
         android:textSize="24sp" />
 
