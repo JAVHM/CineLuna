@@ -1,10 +1,11 @@
-package pe.edu.ulima.cineluna
+package pe.edu.ulima.cineluna.fragments
 
 import android.os.Bundle
 import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import pe.edu.ulima.cineluna.R
 import pe.edu.ulima.pm.swapp.adapters.ListadoPeliculasAdapter
 import pe.edu.ulima.pm.swapp.models.GestorPeliculas
 import pe.edu.ulima.pm.swapp.models.beans.Peliculas
