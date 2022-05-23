@@ -12,7 +12,6 @@ import pe.edu.ulima.pm.swapp.models.GestorPeliculas
 import pe.edu.ulima.pm.swapp.models.beans.Peliculas
 
 class PeliFragment: Fragment(R.layout.fragment_descriptionfilm)  {
-    //a
     private lateinit var mRviPeliculas : RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +32,7 @@ class PeliFragment: Fragment(R.layout.fragment_descriptionfilm)  {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val listaPeliculas : List<Peliculas> = GestorPeliculas().obtenerListaPeliculas()
+        val listaPeliculas : List<Peliculas> = GestorPeliculas().obtenerPeliculas()
         val adapter = PeliculaAdapter(listaPeliculas[0]) {
             Log.i("PeliculasFragment","Se hizo click en la pelicula " + it.nombre);
         }

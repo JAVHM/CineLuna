@@ -1,4 +1,4 @@
-package pe.edu.ulima.cineluna.fragments
+package pe.edu.ulima.cineluna
 
 import android.os.Bundle
 import android.util.Log
@@ -6,7 +6,6 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
-import pe.edu.ulima.cineluna.R
 import pe.edu.ulima.pm.swapp.adapters.ListadoPeliculasAdapter
 import pe.edu.ulima.pm.swapp.adapters.PeliculaAdapter
 import pe.edu.ulima.pm.swapp.models.GestorPeliculas
@@ -39,7 +38,6 @@ class PeliculasFragment : Fragment(R.layout.fragment_listapeliculas) {
 
         val listaPeliculas : List<Peliculas> = GestorPeliculas().obtenerPeliculas()
         val adapter = ListadoPeliculasAdapter(listaPeliculas) {
-
             Log.i("PeliculasFragment","Se hizo click en la pelicula " + it.nombre);
             val ft = (activity as FragmentActivity).supportFragmentManager.beginTransaction()
             ft.remove(this)

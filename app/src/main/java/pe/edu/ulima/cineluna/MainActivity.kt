@@ -1,13 +1,12 @@
 package pe.edu.ulima.cineluna
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.navigation.NavigationView
-import pe.edu.ulima.cineluna.fragments.PeliculasFragment
-import pe.edu.ulima.cineluna.fragments.SobreNosotrosFragment
 
 class MainActivity : FragmentActivity() {
     var eteNombre: TextView?=null;
@@ -15,7 +14,6 @@ class MainActivity : FragmentActivity() {
     private lateinit var nviMain: NavigationView
     private lateinit var dlaMain: DrawerLayout
     private val fragmentPeliculas = PeliculasFragment()
-    private val fragmentSobreNosotros = SobreNosotrosFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,29 +34,11 @@ class MainActivity : FragmentActivity() {
         ft.add(R.id.fcvSecciones, fragmentPeliculas)
         ft.commit()
 
-        //Menu y Fragments
+        //cerrar el memu
         nviMain.setNavigationItemSelectedListener {
             it.setCheckable(true)
-
-            val ft = supportFragmentManager.beginTransaction()
-
-            when(it.itemId){
-                R.id.menCartelera -> FragmentCartelera(ft)
-                R.id.menSobreNosotros -> FragmentSobrenosotros(ft)
-            }
-
-            ft.commit()
-
             dlaMain.closeDrawers()
             true
         }
-    }
-
-    private fun FragmentCartelera(ft: FragmentTransaction){
-        ft.replace(R.id.fcvSecciones, fragmentPeliculas)
-    }
-
-    private fun FragmentSobrenosotros(ft: FragmentTransaction){
-        ft.replace(R.id.fcvSecciones, fragmentSobreNosotros)
     }
 }
