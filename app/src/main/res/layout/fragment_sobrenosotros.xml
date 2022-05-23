@@ -16,9 +16,11 @@
             android:id="@+id/tviTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/bebas"
+            android:gravity="center_horizontal"
             android:text="¿Quienes somos?"
-            android:textSize="34sp"
-            android:textColor="@color/white"></TextView>
+            android:textColor="@color/white"
+            android:textSize="34sp"></TextView>
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
@@ -26,10 +28,15 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_below="@id/toolbar"
-        android:layout_margin="1dp"
-        android:text="Josue Leite (20181012)"
-        android:textSize="24sp"
-        android:background="@color/white"/>
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:fontFamily="@font/homespun"
+        android:text="Josue Leite Sanguinetti-20181012"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/miembro2"
@@ -37,9 +44,11 @@
         android:layout_height="60dp"
         android:layout_below="@+id/miembro1"
         android:layout_margin="1dp"
-        android:text="Jaime Van Hemelrijck"
+        android:text="Jaime Van Hemelrijck-20181973"
         android:textSize="24sp"
-        android:background="@color/white"/>
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:fontFamily="@font/homespun"/>
 
     <TextView
         android:id="@+id/miembro3"
@@ -47,12 +56,14 @@
         android:layout_height="60dp"
         android:layout_below="@+id/miembro2"
         android:layout_margin="1dp"
-        android:text="Robert Sebastian Lezama"
+        android:text="Sebastian Lezama Vásquez-2018275"
+        android:textColor="@color/black"
         android:textSize="24sp"
-        android:background="@color/white"/>
+        android:background="@color/white"
+        android:fontFamily="@font/homespun"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="500dp"
         android:layout_marginTop="230dp">
         <Button
             android:id="@+id/btnRegresarSobre"
@@ -69,6 +80,7 @@
             android:backgroundTint="#FFFFFF"
             android:textColor="#8A0101"
             android:text="REGRESAR" />
+
     </LinearLayout>
 
 

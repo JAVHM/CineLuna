@@ -17,6 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="#272626"
+        android:fontFamily="@font/bebas"
         />
 
     <TextView
@@ -26,6 +27,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:fontFamily="@font/bebas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tviPeliculaNombre" />
 
