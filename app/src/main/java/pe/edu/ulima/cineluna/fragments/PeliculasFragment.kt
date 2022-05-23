@@ -34,8 +34,9 @@ class PeliculasFragment : Fragment(R.layout.fragment_listapeliculas) {
         super.onViewCreated(view, savedInstanceState)
         mRviPeliculas = view.findViewById(R.id.rviPeliculas)
 
-        val listaPeliculas : List<Peliculas> = GestorPeliculas().obtenerListaPeliculas()
+        val listaPeliculas : List<Peliculas> = GestorPeliculas().obtenerPeliculas()
         val adapter = ListadoPeliculasAdapter(listaPeliculas) {
+
             Log.i("PeliculasFragment","Se hizo click en la pelicula " + it.nombre);
         }
         mRviPeliculas.adapter = adapter
