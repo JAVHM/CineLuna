@@ -12,6 +12,7 @@ import pe.edu.ulima.pm.swapp.models.GestorPeliculas
 import pe.edu.ulima.pm.swapp.models.beans.Peliculas
 
 class PeliFragment: Fragment(R.layout.fragment_descriptionfilm)  {
+    //a
     private lateinit var mRviPeliculas : RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
