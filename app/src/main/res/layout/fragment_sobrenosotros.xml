@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
 
 
     <androidx.appcompat.widget.Toolbar
@@ -47,5 +45,14 @@
         android:layout_margin="1dp"
         android:text="Robert Sebastian Lezama"
         android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnRegresarSobre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/miembro3"
+        android:backgroundTint="#B10C00"
+        android:layout_marginTop="422dp"
+        android:text="REGRESAR" />
 
 </RelativeLayout>
