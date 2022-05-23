@@ -11,12 +11,10 @@ import pe.edu.ulima.pm.swapp.adapters.PeliculaAdapter
 import pe.edu.ulima.pm.swapp.models.GestorPeliculas
 import pe.edu.ulima.pm.swapp.models.beans.Peliculas
 
-class PeliculasFragment : Fragment(R.layout.fragment_listapeliculas) {
+class PeliFragment: Fragment(R.layout.fragment_descriptionfilm)  {
     private lateinit var mRviPeliculas : RecyclerView
-    private val fragmentPeli = PeliFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        activity?.title = "Peliculas"
         setHasOptionsMenu(true)
     }
     override fun onCreateView(
@@ -24,26 +22,19 @@ class PeliculasFragment : Fragment(R.layout.fragment_listapeliculas) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_listapeliculas, container, false)
+        return inflater.inflate(R.layout.fragment_descriptionfilm, container, false)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.menu_peliculas, menu)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mRviPeliculas = view.findViewById(R.id.rviPeliculas)
 
         val listaPeliculas : List<Peliculas> = GestorPeliculas().obtenerListaPeliculas()
-        val adapter = ListadoPeliculasAdapter(listaPeliculas) {
+        val adapter = PeliculaAdapter(listaPeliculas[0]) {
             Log.i("PeliculasFragment","Se hizo click en la pelicula " + it.nombre);
-            val ft = (activity as FragmentActivity).supportFragmentManager.beginTransaction()
-            ft.remove(this)
-            ft.add(R.id.fcvSecciones, fragmentPeli)
-            ft.commit()
         }
-        mRviPeliculas.adapter = adapter
     }
 }

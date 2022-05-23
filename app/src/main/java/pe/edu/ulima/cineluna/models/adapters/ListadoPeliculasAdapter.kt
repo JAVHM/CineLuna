@@ -10,7 +10,7 @@ import pe.edu.ulima.pm.swapp.models.beans.Peliculas
 
 
 class ListadoPeliculasAdapter(private val mListaPeliculas : List<Peliculas>,
-                                     private val mOnItemClickListener : (pelicula : Peliculas) -> Unit)
+                              private val mOnItemClickListener : (pelicula : Peliculas) -> Unit)
     : RecyclerView.Adapter<ListadoPeliculasAdapter.ViewHolder>(){
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         val tviPeliculaNombre : TextView
