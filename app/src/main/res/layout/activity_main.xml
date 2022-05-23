@@ -19,25 +19,24 @@ android:id="@+id/dlaMain"
         android:id="@+id/toolbar"
         android:elevation="4dp"
         android:background="#77000E">
+
         <TextView
             android:id="@+id/tviTitulo"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Hola %nombre%"
+            android:textColor="@color/white"
             android:textSize="34sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/white"
-            android:layout_gravity="center"
-            >
-        </TextView>
+            app:layout_constraintTop_toTopOf="parent"></TextView>
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.fragment.app.FragmentContainerView
+    <FrameLayout
         android:id="@+id/fcvSecciones"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"/>
 </LinearLayout>
 

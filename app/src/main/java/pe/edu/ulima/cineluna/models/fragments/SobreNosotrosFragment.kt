@@ -12,7 +12,6 @@ import androidx.fragment.app.FragmentActivity
 class SobreNosotrosFragment : Fragment() {
     //Cambio
     private var btnRegresar : Button?=null
-    //private val ft = (activity as FragmentActivity).supportFragmentManager.beginTransaction()
     private val fragmentPeliculas = PeliculasFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,10 +30,10 @@ class SobreNosotrosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btnRegresar = view.findViewById(R.id.btnRegresarSobre)
-
-        /*btnRegresar!!.setOnClickListener{v:View->
+        val ft = (activity as FragmentActivity).supportFragmentManager.beginTransaction()
+        btnRegresar!!.setOnClickListener{v:View->
             ft.replace(R.id.fcvSecciones, fragmentPeliculas)
             ft.commit()
-        }*/
+        }
     }
 }

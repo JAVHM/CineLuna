@@ -32,9 +32,9 @@ class MainActivity : FragmentActivity() {
         eteNombre!!.setText(dato.toString())
 
         // Cargar el fragment por defecto
-        val ft = supportFragmentManager.beginTransaction()
-        ft.add(R.id.fcvSecciones, fragmentPeliculas)
-        ft.commit()
+        supportFragmentManager.beginTransaction().replace(R.id.fcvSecciones, fragmentPeliculas).commit()
+        //ft.add(R.id.fcvSecciones, fragmentPeliculas)
+        //ft.commit()
 
         //Menu y Fragments
         nviMain.setNavigationItemSelectedListener {

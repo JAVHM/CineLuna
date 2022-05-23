@@ -39,10 +39,12 @@ class PeliculasFragment : Fragment(R.layout.fragment_listapeliculas) {
         val listaPeliculas : List<Peliculas> = GestorPeliculas().obtenerPeliculas()
         val adapter = ListadoPeliculasAdapter(listaPeliculas) {
             Log.i("PeliculasFragment","Se hizo click en la pelicula " + it.nombre);
-            val ft = (activity as FragmentActivity).supportFragmentManager.beginTransaction()
-            ft.remove(this)
-            ft.add(R.id.fcvSecciones, fragmentPeli)
-            ft.commit()
+            val bundle = Bundle()
+            bundle.putString("dataNombre", it.nombre)
+            bundle.putString("dataDescripcion", it.descripcion)
+            val fragment = PeliFragment()
+            fragment.arguments = bundle
+            fragmentManager?.beginTransaction()?.replace(R.id.fcvSecciones, fragment)?.commit()
         }
         mRviPeliculas.adapter = adapter
     }
