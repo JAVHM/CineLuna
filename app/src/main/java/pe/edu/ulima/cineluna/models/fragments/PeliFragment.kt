@@ -3,8 +3,10 @@ package pe.edu.ulima.cineluna.models.fragments
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import pe.edu.ulima.cineluna.R
 import pe.edu.ulima.pm.swapp.adapters.PeliculaAdapter
@@ -39,10 +41,16 @@ class PeliFragment: Fragment(R.layout.fragment_descriptionfilm)  {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        var btnRegresar : Button = view.findViewById(R.id.btnRegresar)
+        val ft = (activity as FragmentActivity).supportFragmentManager.beginTransaction()
+        btnRegresar!!.setOnClickListener{v:View->
+            ft.replace(R.id.fcvSecciones, PeliculasFragment())
+            ft.commit()
+        }
         val listaPeliculas : List<Peliculas> = GestorPeliculas().obtenerPeliculas()
         val adapter = PeliculaAdapter(listaPeliculas[0]) {
             Log.i("PeliculasFragment","Se hizo click en la pelicula " + it.nombre);
         }
+
     }
 }
