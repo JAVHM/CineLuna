@@ -10,7 +10,7 @@ import pe.edu.ulima.cineluna.R
 import androidx.fragment.app.FragmentActivity
 
 class SobreNosotrosFragment : Fragment() {
-
+    //Cambio
     private var btnRegresar : Button?=null
     private val ft = (activity as FragmentActivity).supportFragmentManager.beginTransaction()
     private val fragmentPeliculas = PeliculasFragment()
